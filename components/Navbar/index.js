@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
     Avatar,
     Box,
-    Button,
     Divider,
     Drawer,
     Hidden,
@@ -12,22 +11,15 @@ import {
     makeStyles
 } from '@material-ui/core';
 import {
-    AlertCircle as AlertCircleIcon,
     BarChart as BarChartIcon,
-    Lock as LockIcon,
-    Settings as SettingsIcon,
-    ShoppingBag as ShoppingBagIcon,
-    User as UserIcon,
-    UserPlus as UserPlusIcon,
     Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem.tsx';
 
 const user = {
-    // TODO: Use my picture
-    avatar: '/static/images/avatars/avatar_6.png',
-    jobTitle: 'Runner',
-    name: 'John Doe'
+    avatar: '/favicon.ico',
+    jobTitle: 'Professional Escaper',
+    name: 'Nameless Fornow'
 };
 
 const items = [
@@ -41,36 +33,6 @@ const items = [
         icon: UsersIcon,
         title: 'Page2'
     },
-    // {
-    //     href: '/app/products',
-    //     icon: ShoppingBagIcon,
-    //     title: 'Products'
-    // },
-    // {
-    //     href: '/app/account',
-    //     icon: UserIcon,
-    //     title: 'Account'
-    // },
-    // {
-    //     href: '/app/settings',
-    //     icon: SettingsIcon,
-    //     title: 'Settings'
-    // },
-    // {
-    //     href: '/login',
-    //     icon: LockIcon,
-    //     title: 'Login'
-    // },
-    // {
-    //     href: '/register',
-    //     icon: UserPlusIcon,
-    //     title: 'Register'
-    // },
-    // {
-    //     href: '/404',
-    //     icon: AlertCircleIcon,
-    //     title: 'Error'
-    // }
 ];
 
 const useStyles = makeStyles(() => ({
@@ -130,7 +92,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
                             href={href}
                             key={title}
                             title={title}
-                            icon={icon}
+                            Icon={icon}
                         />
                     ))}
                 </List>

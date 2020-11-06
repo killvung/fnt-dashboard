@@ -3,10 +3,10 @@ import clsx from 'clsx';
 import {
     AppBar,
     // Maybe I will use this one day, I saw this from example
-    // Badge,
     // Box,
     Hidden,
     Toolbar,
+    Typography,
     makeStyles
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -33,6 +33,9 @@ const NavBarTop: React.FC<NavBarTopProps> = (props) => {
             elevation={0}
         >
             <Toolbar>
+                <Typography variant="h6">
+                    FRONT
+                </Typography>
                 <Hidden lgUp>
                     <IconButton color="inherit" onClick={() => { props.onMobileNavOpen() }}>
                         <MenuIcon />

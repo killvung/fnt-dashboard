@@ -19,7 +19,6 @@ if (!MONGODB_DB) {
  * in development. This prevents connections growing exponentiatlly
  * during API Route usage.
  */
-// Explain
 let cached = global.mongo
 if (!cached) cached = global.mongo = {}
 
